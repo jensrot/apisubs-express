@@ -1,6 +1,5 @@
 const path = require("path");
 const express = require("express");
-const serveIndex = require("serve-index");
 const app = express();
 const PORT = 8080;
 const ROOT = path.join(__dirname, "public");
@@ -13,10 +12,9 @@ app.use((_, res, next) => {
 });
 
 app.use(express.static(ROOT));
-// app.use("/", serveIndex(ROOT));
 
-if(process.argv.length > 1) {
-  if(process.argv[2] == 'dev') {
+if (process.argv.length > 1) {
+  if (process.argv[2] == 'dev') {
     mode = 'dev'
     console.log('dev mode')
   }
