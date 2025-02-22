@@ -1,4 +1,9 @@
-export const LANGUAGES = [
+interface LanguageOption {
+    value: string;
+    label: string;
+}
+
+export const LANGUAGES: LanguageOption[] = [
     { value: 'en', label: 'English' },
     { value: 'zh', label: 'Chinese' },
     { value: 'de', label: 'German' },

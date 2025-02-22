@@ -80,7 +80,7 @@ export const ApiTranscribeQroq = () => {
         }
     };
 
-    function srtToVtt(data: any) {
+    const srtToVtt = (data: any): string => {
         let vtt = 'WEBVTT\n\n';
         vtt += data
             .replace(/^\d+$/gm, '')
@@ -259,7 +259,7 @@ export const ApiTranscribeQroq = () => {
 
             <div>
                 <h4>How it works</h4>
-                <p>Files are processed locally using FFmpeg WASM and sent to Groq's API.</p>
+                <p>Files are processed locally using <a target='_blank' href='https://ffmpegwasm.netlify.app/'>FFmpeg WASM</a> and sent to Groq's API.</p>
                 <p>Get API key at <a target='_blank' href="https://console.groq.com/keys">Groq Console</a></p>
             </div>
         </div>
